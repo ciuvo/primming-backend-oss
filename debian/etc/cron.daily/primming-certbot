@@ -1,0 +1,3 @@
+#!/bin/sh -e
+
+/usr/bin/certbot renew && cd /opt/primming-docker/ && /usr/bin/docker-compose -p primming restart proxy

@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    upgrade)
+    ;;
+    remove)
+       cd {{INSTALL_DIR}}
+       docker-compose up -p primming -f docker-compose.yaml -f docker-compose.prod.yaml
+    ;;
+    abort)
+    ;;
+    *) echo "$0: didn't understand being called with \`$1'" 1>&2
+        exit 0
+    ;;
+esac
+
+exit 0

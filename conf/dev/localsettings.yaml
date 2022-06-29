@@ -1,0 +1,8 @@
+DEBUG: true
+ALLOWED_HOSTS:
+  - localhost
+  - "*"
+
+CSRF_TRUSTED_ORIGINS:
+  - https://localhost
+  - https://*

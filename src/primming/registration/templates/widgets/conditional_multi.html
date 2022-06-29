@@ -1,0 +1,3 @@
+{% for value in widget.values %}
+    <input type="{{ widget.type }}" name="{{ widget.name }}"{% if value != None %} value="{{ value }}"{% endif %}{% include "django/forms/widgets/attrs.html" %}>
+{% endfor %}

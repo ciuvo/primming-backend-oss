@@ -1,0 +1,151 @@
+# Copyright 2019 Ciuvo GmbH. All rights reserved. This file is subject to the terms and conditions
+# defined in file 'LICENSE', which is part of this source code package.
+
+# Default config
+
+version: '3.7'
+
+# not picked up by the override yaml?
+services:
+  # the Database backend
+  database:
+    image: primming/database
+    secrets:
+      - mysql-rootpw
+      - mysql-pass
+    environment:
+      MYSQL_DATABASE: primmingweb
+      MYSQL_USER: primmingweb
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql-rootpw
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql-pass
+    volumes:
+      - mysql-db:/var/lib/mysql
+    networks:
+      - database
+
+  # The redis queue / cache
+  cache:
+    image: redis:6.2-alpine
+    networks:
+      - cache
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-db:/data
+
+  # The Django Webapp
+  webapp: &cfg-webapp
+    image: primming/webapp
+    networks:
+      - frontend
+      - database
+      - cache
+    depends_on:
+      - cache
+      - database
+    secrets:
+      - django-db-conf
+    volumes:
+      - static-files:/opt/primming/static
+
+  # Celery worker
+  taskqueue:
+    <<: *cfg-webapp
+    command: ./run-celery.sh
+
+  # Wordpress Database backend
+  database-wordpress:
+    image: primming/database
+    secrets:
+      - mysql-wordpress-rootpw
+      - mysql-wordpress-pass
+    environment:
+      MYSQL_DATABASE: primmingwp
+      MYSQL_USER: primmingwp
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql-wordpress-rootpw
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql-wordpress-pass
+    volumes:
+      - mysql-db-wordpress:/var/lib/mysql
+    networks:
+      - database
+
+  # Wordpress CMS
+  wordpress:
+    image: wordpress:php7.4-fpm-alpine
+    networks:
+      - frontend
+      - database
+    depends_on:
+      - database-wordpress
+    secrets:
+      - mysql-wordpress-pass
+    environment:
+      WORDPRESS_DB_HOST: database-wordpress
+      WORDPRESS_DB_USER: primmingwp
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/mysql-wordpress-pass
+      WORDPRESS_DB_NAME: primmingwp
+      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_AUTH_KEY: "*C _O@Tm]f>-i*OD@B]~b)=gCsMyjoXD}Z}ef,`Bg<i+>fI7Ntkq,3!bTR_-!Ck3"
+      WORDPRESS_AUTH_SALT: "];ihdZeTPG|?1T=[eP)?&ichiACRYks90&OhJAs_GHemH%qCk|k!#w/tl@:pjAu4"
+      WORDPRESS_LOGGED_IN_KEY: "v-uAagz-C+C9lw9mU6PuAwh<T%[u^@fM/#y$$%VC ~BZCNW,So5`CR5Of^ hi+vyX"
+      WORDPRESS_LOGGED_IN_SALT: "|,7,!~mQR<v%`c*(z6q@=fX1p/)_s1Hiob=I@]9r4^YhEJ/|cr=?1RlyQ$$4}!fB7"
+      WORDPRESS_NONCE_KEY: "{8< za{.dd1PGi|JMCbr1WI5C,A(@Ul(_9V%_?|MG3_SD7hDb/}W>E6hk`4GgM]("
+      WORDPRESS_NONCE_SALT: "|>7MtZSUA>&|`7|xk*6YPUl<oo5}ckf+PdP*LUWpW?fyO(Uq,Y1H#&}B x7pGsFv"
+      WORDPRESS_SECURE_AUTH_KEY: "hluX=nNVJ<d!oWvS0)ErxhP {#Ue) dq1S:}[<cX/[K8%cx&~Nt1Fk~#<;hD<({>"
+      WORDPRESS_SECURE_AUTH_SALT: "7vW#+#htA$$F,&(J@RfWz/mjT@44+7s,}?0OiqR~10$$hYaJw>uS{Ye$$/3=dhN{l|^"
+    volumes:
+      - wordpress-data:/var/www/html
+
+  # NGINX reverse proxy
+  proxy:
+    image: primming/proxy
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - frontend
+    depends_on:
+      - webapp
+    volumes:
+      - static-files:/opt/primming/static
+      - wordpress-data:/var/www/html
+      - certbot-www:/var/www/certbot
+    secrets:
+      - ssl-key
+      - ssl-crt
+      - ssl-dhparam
+      - ssh-ca-chain
+
+volumes:
+  mysql-db:
+  redis-db:
+  static-files:  # S3-driver?
+  wordpress-data:
+  certbot-www:
+  mysql-db-wordpress:
+
+networks:
+  frontend:
+  database:
+  cache:
+
+secrets:
+  django-db-conf:
+    file: ./docker/secrets/django-db.cnf
+  mysql-rootpw:
+    file: ./docker/secrets/mysql-rootpw.txt
+  mysql-pass:
+    file: ./docker/secrets/mysql-pass.txt
+  ssl-key:
+    # self signed, will be replaced with proper cert in production
+    file: ./docker/secrets/ssl.key
+  ssl-crt:
+    # self signed, will be replaced with proper cert in production
+    file: ./docker/secrets/ssl.crt
+  ssl-dhparam:
+    file: ./docker/secrets/dhparam.pem
+  ssh-ca-chain:
+    file: ./docker/secrets/ca-letsencrypt.pem
+  mysql-wordpress-rootpw:
+    file: ./docker/secrets/mysql-wordpress-pass.txt
+  mysql-wordpress-pass:
+    file: ./docker/secrets/mysql-wordpress-rootpw.txt

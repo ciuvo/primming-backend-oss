@@ -1,0 +1,15 @@
+Source: {{ PKG_NAME }}
+Section: misc
+Priority: extra
+Maintainer: Simon Lachinger <simon@ciuvo.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.7
+Homepage: git@git.ciuvo:ciuvo/primming-backend.git
+VCS-Git: git@git.ciuvo:ciuvo/picky-backend.git
+VCS-Browser: https://git.ciuvo/ciuvo/preiswert-backend
+
+Package: {{ PKG_NAME }}
+Architecture: all
+Depends: ciuvo-common, software-properties-common, awscli, docker.io, docker-compose
+Description: plugin.preiswert.at site and API
+ This package installs  plugin.preiswert.at wordpress resources and API

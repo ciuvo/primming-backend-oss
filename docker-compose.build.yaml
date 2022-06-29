@@ -1,0 +1,25 @@
+# Copyright 2019 Ciuvo GmbH. All rights reserved. This file is subject to the terms and conditions
+# defined in file 'LICENSE', which is part of this source code package.
+
+# Default config
+
+version: '3.7'
+
+# not picked up by the override yaml?
+services:
+  # the Database backend
+  database:
+    build:
+      context: ./docker/database
+
+  # The Django Webapp
+  webapp: &cfg-webapp
+    build: &build-cfg-webapp
+      context: ./
+      dockerfile: ./docker/webapp/Dockerfile
+
+  # NGINX reverse proxy
+  proxy:
+    build:
+      context: ./docker/proxy
+

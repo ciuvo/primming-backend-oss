@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+DESTDIR=$(CURDIR)/debian/
+
+%:
+	dh $@
+
+override_dh_installinit:
+
+	mv $(DESTDIR)service $(DESTDIR){{PKG_NAME}}.service
+
+	dh_installinit --no-restart-on-upgrade --name={{PKG_NAME}}
+
+%:
+	dh $@

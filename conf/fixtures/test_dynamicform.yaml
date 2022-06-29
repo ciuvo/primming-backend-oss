@@ -1,0 +1,382 @@
+# --- basic form ---
+- model: registration.dynamicform
+  pk: 1
+  fields:
+    name: Primming Registration
+    display_name: null
+    default: true
+- model: registration.formfieldset
+  pk: 1
+  fields:
+    name: Personal Data
+    display_name: Personal info
+- model: registration.formfieldset
+  pk: 2
+  fields:
+    name: Demographic Data
+    display_name: null
+- model: registration.fieldsetorder
+  pk: 1
+  fields:
+    position: 0
+    form: 1
+    fieldset: 1
+- model: registration.fieldsetorder
+  pk: 2
+  fields:
+    position: 1
+    form: 1
+    fieldset: 2
+- model: registration.fielddefinition
+  pk: 1
+  fields:
+    name: First Name
+    display_name: null
+- model: registration.fielddefinition
+  pk: 2
+  fields:
+    name: Last Name
+    display_name: null
+- model: registration.fielddefinition
+  pk: 3
+  fields:
+    name: E-Mail Address
+    display_name: null
+- model: registration.fielddefinition
+  pk: 4
+  fields:
+    name: Phone Number
+    display_name: null
+- model: registration.fielddefinition
+  pk: 5
+  fields:
+    name: Age
+    display_name: null
+- model: registration.fielddefinition
+  pk: 6
+  fields:
+    name: Gender
+    display_name: null
+- model: registration.fielddefinition
+  pk: 7
+  fields:
+    name: Browser
+    display_name: null
+- model: registration.fielddefinition
+  pk: 8
+  fields:
+    name: Device
+    display_name: null
+- model: registration.fielddefinitionorder
+  pk: 1
+  fields:
+    position: 0
+    row: 0
+    optional: false
+    fieldset: 1
+    definition: 1
+- model: registration.fielddefinitionorder
+  pk: 2
+  fields:
+    position: 1
+    row: 0
+    optional: false
+    fieldset: 1
+    definition: 2
+- model: registration.fielddefinitionorder
+  pk: 3
+  fields:
+    position: 0
+    row: 1
+    optional: false
+    fieldset: 1
+    definition: 3
+- model: registration.fielddefinitionorder
+  pk: 4
+  fields:
+    position: 1
+    row: 1
+    optional: true
+    fieldset: 1
+    definition: 4
+- model: registration.fielddefinitionorder
+  pk: 5
+  fields:
+    position: 0
+    row: 0
+    optional: false
+    fieldset: 2
+    definition: 5
+- model: registration.fielddefinitionorder
+  pk: 6
+  fields:
+    position: 1
+    row: 0
+    optional: false
+    fieldset: 2
+    definition: 6
+- model: registration.fielddefinitionorder
+  pk: 7
+  fields:
+    position: 0
+    row: 1
+    optional: false
+    fieldset: 2
+    definition: 7
+- model: registration.fielddefinitionorder
+  pk: 8
+  fields:
+    position: 1
+    row: 1
+    optional: false
+    fieldset: 2
+    definition: 8
+- model: registration.valuematch
+  pk: 1
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 50
+    value_min: 2
+    definition: 1
+- model: registration.valuematch
+  pk: 2
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 50
+    value_min: 2
+    definition: 2
+- model: registration.valuematch
+  pk: 3
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 4
+- model: registration.valuematch
+  pk: 4
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 50
+    value_min: 5
+    definition: 3
+- model: registration.valuematch
+  pk: 5
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 120
+    value_min: 0
+    definition: 5
+- model: registration.valuematch
+  pk: 6
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Female
+    value_max: null
+    value_min: null
+    definition: 6
+- model: registration.valuematch
+  pk: 7
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Male
+    value_max: null
+    value_min: null
+    definition: 6
+- model: registration.valuematch
+  pk: 8
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Other
+    value_max: null
+    value_min: null
+    definition: 6
+- model: registration.valuematch
+  pk: 9
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Google Chrome
+    value_max: null
+    value_min: null
+    definition: 7
+- model: registration.valuematch
+  pk: 10
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Mozilla Firefox
+    value_max: null
+    value_min: null
+    definition: 7
+- model: registration.valuematch
+  pk: 11
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Microsoft Edge
+    value_max: null
+    value_min: null
+    definition: 7
+- model: registration.valuematch
+  pk: 12
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Opera
+    value_max: null
+    value_min: null
+    definition: 7
+- model: registration.valuematch
+  pk: 13
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Desktop-PC
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 14
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Laptop
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 15
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Apple Mac
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 16
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Apple iPhone
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 17
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Android Phone
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 18
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Apple iPad
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 19
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Android Tablet
+    value_max: null
+    value_min: null
+    definition: 8
+- model: registration.valuematch
+  pk: 20
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: Other
+    value_max: null
+    value_min: null
+    definition: 8
+
+
+# --- test null value for rows ---
+- model: registration.fielddefinition
+  pk: 9
+  fields:
+    name: Row-Null-1
+    display_name: null
+- model: registration.fielddefinition
+  pk: 10
+  fields:
+    name: Row-Null-2
+    display_name: null
+- model: registration.fielddefinitionorder
+  pk: 9
+  fields:
+    position: 0
+    row: null
+    optional: false
+    fieldset: 2
+    definition: 9
+- model: registration.fielddefinitionorder
+  pk: 10
+  fields:
+    position: 0
+    row: null
+    optional: false
+    fieldset: 2
+    definition: 10

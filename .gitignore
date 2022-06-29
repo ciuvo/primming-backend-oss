@@ -1,0 +1,6 @@
+*.pyc
+.idea
+conf/localsettings.yaml
+docker/volumes
+/static/
+dumps/*

@@ -1,0 +1,33 @@
+# Overrides for the development environment
+version: '3.7'
+
+services:
+  database:
+    build:
+      context: ./docker/database
+    ports:
+      # expose database in development
+      - '13306:3306'
+
+  # dev overrides for the webapp
+  webapp: &overrides-webapp
+    build: &build-cfg-webapp
+      context: .
+      dockerfile: ./docker/webapp/Dockerfile
+    volumes:
+      # create bind mounts for /src and /conf
+      - ./src:/opt/primming/src:ro
+      - ./conf:/opt/primming/conf:ro
+    environment:
+      PRIMMING_ENV: dev      # env variable to select development environment settings
+      PRIMMING_DOCKERDEV: 1  # env variable to select indicate we are run in dev with docker
+
+  # dev overrides for the taskqueue
+  taskqueue:
+    <<: *overrides-webapp
+
+  proxy:
+    build:
+      context: ./docker/proxy
+    volumes:
+      - ./docker/proxy/primming.conf:/etc/nginx/conf.d/default.conf

@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -e
+
+
+case "$1" in
+    configure)
+        # make sure docker runs
+        systemctl start docker
+        cd {{INSTALL_DIR}}
+
+        # login to aws ECR docker registry
+        $(aws ecr get-login --no-include-email --region eu-central-1)
+
+        # start / update stack
+        # docker-compose up -p primming -f docker-compose.yaml -f docker-compose.prod.yaml
+        systemctl enable {{PKG_NAME}}.service
+
+        # use valid ssl cert if available
+        if [ -f /etc/letsencrypt/live/primming.picky.io/privkey.pem  ]; then
+            ln -sf /etc/letsencrypt/live/primming.picky.io/chain.pem {{INSTALL_DIR}}/secrets/ca-letsencrypt.pem
+            ln -sf /etc/letsencrypt/live/primming.picky.io/privkey.pem {{INSTALL_DIR}}/secrets/ssl.key
+            ln -sf /etc/letsencrypt/live/primming.picky.io/fullchain.pem {{INSTALL_DIR}}/secrets/ssl.crt
+        fi
+        chmod +x /etc/cron.daily/primming-certbot
+
+        # fetch docker images (docker-compose pull fails to fetch the images from custom registry)
+        $(aws ecr get-login --no-include-email --region eu-central-1)
+        docker-compose -f docker-compose.yaml -f docker-compose.{{ENVIRONMENT}}.yaml pull
+        systemctl restart {{PKG_NAME}}.service
+
+        # cleanup
+        docker system prune -af
+    ;;
+esac
+
+#DEBHELPER#

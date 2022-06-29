@@ -1,0 +1,8 @@
+{{INSTALL_DIR}}
+{{INSTALL_DIR}}/volumes
+{{INSTALL_DIR}}/volumes/mysql
+{{INSTALL_DIR}}/volumes/redis
+{{INSTALL_DIR}}/volumes/mysql-wordpress
+{{INSTALL_DIR}}/volumes/wordpress-data
+{{INSTALL_DIR}}/volumes/static-files
+{{INSTALL_DIR}}/volumes/certbot-www/.well-known

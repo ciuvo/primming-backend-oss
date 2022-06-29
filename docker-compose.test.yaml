@@ -1,0 +1,7 @@
+# Overrides for the CI environment
+version: '3.7'
+
+services:
+  webapp:
+    environment:
+      PRIMMING_ENV: test

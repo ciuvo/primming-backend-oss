@@ -1,0 +1,20 @@
+- model: pricewatcher.page
+  pk: 1
+  fields:
+    name: Mindfactory AMD Ryzen 7 5800X
+    url: https://www.mindfactory.de/product_info.php/AMD-Ryzen-7-5800X-8x-3-80GHz-So-AM4-WOF_1380727.html
+    enabled: true
+- model: pricewatcher.page
+  pk: 2
+  fields:
+    name: Mr Spex Ray Ban
+    url: https://www.misterspex.at/p/pg/6675090
+    enabled: true
+- model: pricewatcher.pagegroup
+  pk: 1
+  fields:
+    name: primming set 1
+    default: true
+    pages:
+    - 1
+    - 2

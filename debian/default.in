@@ -1,0 +1,3 @@
+# preiswert website defaults
+export PWP_CONFIG={{PWP_CONFIG}}
+export PRIMMING_DOCKER_REGISTRY={{DOCKER_REGISTRY}}

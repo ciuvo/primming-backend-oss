@@ -1,0 +1,66 @@
+# Overrides for the production environment
+version: '3.7'
+
+services:
+  database:
+    image: ${PRIMMING_DOCKER_REGISTRY}/primming/database:${BUILD_VERSION}
+
+  database-wordpress:
+    image: ${PRIMMING_DOCKER_REGISTRY}/primming/database:${BUILD_VERSION}
+
+  webapp:
+    image: ${PRIMMING_DOCKER_REGISTRY}/primming/webapp:${BUILD_VERSION}
+    environment:
+      PRIMMING_ENV: prod
+
+  taskqueue:
+    image: ${PRIMMING_DOCKER_REGISTRY}/primming/webapp:${BUILD_VERSION}
+    environment:
+      PRIMMING_ENV: prod
+
+  proxy:
+    image: ${PRIMMING_DOCKER_REGISTRY}/primming/proxy:${BUILD_VERSION}
+
+volumes:
+  mysql-db:
+    name: mysql-db-local
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/primming-docker/volumes/mysql
+  redis-db:
+    name: redis-db-local
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/primming-docker/volumes/redis
+  static-files:
+    name: static-files-local
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/primming-docker/volumes/static-files
+  mysql-db-wordpress:
+    name: mysql-db-local-wordpress
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/primming-docker/volumes/mysql-wordpress
+  wordpress-data:
+    name: wordpress-data-local
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/primming-docker/volumes/wordpress-data
+  certbot-www:
+    name: proxy-certbot-www
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/primming-docker/volumes/certbot-www

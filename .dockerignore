@@ -1,0 +1,11 @@
+__pycache__
+conf/localsettings.yaml
+conf/*.in
+conf/*-dev.*
+*.pyc
+*/__pycache__
+*/*/__pycache__
+*/*/*.pyc
+docker/volumes
+
+

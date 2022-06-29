@@ -1,0 +1,71 @@
+{% extends "base-bootstrap.html" %} {% load crispy_forms_tags %} {% block title %}{{ title }}{% endblock %} {% block extrahead %}
+<style id="header-footer-style">
+    #wp-header,
+    #wp-footer {
+        width: 100%;
+        overflow: hidden;
+        border: none;
+    }
+
+    #wp-header {
+        height: 80px;
+    }
+
+    #wp-footer {
+        height: 447px;
+    }
+
+    #main-content {
+        margin-bottom: 10px;
+        z-index: 16777271;
+        position: relative;
+        padding-left: 7%;
+    }
+</style>
+<style id="form-style">
+    .form-row {
+        border-top: 1px #ddd solid;
+        width: 100%;
+    }
+
+    legend {
+        padding-top: 10px;
+    }
+</style>
+{% endblock %} {% block content %}
+<iframe
+    src="/jhj/"
+    id="wp-header"
+    scrolling="no"
+>
+</iframe>
+<div class="d-flex flex-column" id="main-content">
+    <div class="d-flex flex-row">
+        <div class="p-3">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+    <div class="d-flex flex-xl-row">
+        <div class="p-4"> {% crispy form form.helper %} </div>
+    </div>
+</div>
+<iframe
+    src="/jkj/"
+    id="wp-footer"
+    scrolling="no"
+></iframe>
+
+<script id="script-iframe-clicks">
+    // hack, hack, footer click
+    window.addEventListener("message", (e) => {
+        console.log(e);
+        console.log(e.origin !== document.location.origin);
+        if (e.origin !== document.location.origin) return;
+
+        setTimeout(() => {
+            document.location.href = JSON.parse(e.data).url;
+            return false;
+        }, 1);
+    });
+</script>
+{% endblock %}

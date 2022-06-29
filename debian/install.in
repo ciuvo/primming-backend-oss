@@ -1,0 +1,5 @@
+.env {{INSTALL_DIR}}
+docker-compose.yaml {{INSTALL_DIR}}
+docker-compose.{{ENVIRONMENT}}.yaml {{INSTALL_DIR}}
+docker/secrets {{INSTALL_DIR}}
+debian/etc /

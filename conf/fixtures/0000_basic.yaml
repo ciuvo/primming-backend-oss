@@ -1,0 +1,2074 @@
+- model: registration.dynamicform
+  pk: 2
+  fields:
+    name: survey
+    display_name: preis.wert Umfrage
+    default: true
+- model: registration.formfieldset
+  pk: 4
+  fields:
+    name: statistics
+    display_name: Statistik
+- model: registration.formfieldset
+  pk: 5
+  fields:
+    name: habits
+    display_name: Gewohnheiten und Kenntnisse
+- model: registration.fieldsetorder
+  pk: 4
+  fields:
+    position: 0
+    form: 2
+    fieldset: 4
+- model: registration.fieldsetorder
+  pk: 5
+  fields:
+    position: 1
+    form: 2
+    fieldset: 5
+- model: registration.fielddefinition
+  pk: 21
+  fields:
+    name: age
+    widget: 0
+    display_name: 1. Wie alt sind Sie?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 22
+  fields:
+    name: sex
+    widget: 1
+    display_name: 2. Geschlecht?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 23
+  fields:
+    name: household
+    widget: 0
+    display_name: 3. Wie viele Personen - Sie eingeschlossen - leben in Ihrem Haushalt?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 24
+  fields:
+    name: earners
+    widget: 0
+    display_name: 4. Wie viele Personen - Sie eingeschlossen - haben ein Einkommen?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 25
+  fields:
+    name: children
+    widget: 0
+    display_name: 5. Wie viele Kinder leben in Ihrem Haushalt?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 26
+  fields:
+    name: child_age
+    widget: 2
+    display_name: 5b. Bitte geben Sie auch das Alter der Kinder an.
+    default_value: null
+- model: registration.fielddefinition
+  pk: 27
+  fields:
+    name: martial_status
+    widget: 1
+    display_name: 6. Welchen Familienstand haben Sie?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 28
+  fields:
+    name: education
+    widget: 1
+    display_name: 7. Was ist Ihre höchste abgeschlossene Schulbildung?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 29
+  fields:
+    name: zip_code
+    widget: 0
+    display_name: 10. Wie lautet Ihre Postleitzahl?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 30
+  fields:
+    name: device_user
+    widget: 1
+    display_name: 11. Nutzen auch andere dieses Gerät?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 31
+  fields:
+    name: other_users
+    widget: 3
+    display_name: 11a. Wer nutzt das Gerät ansonsten?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 32
+  fields:
+    name: usage-children
+    widget: 3
+    display_name: 11b. Geben Sie bitte auch an, wofür ihr Kind / ihre Kinder ihr Gerät
+      nutzt.
+    default_value: null
+- model: registration.fielddefinition
+  pk: 33
+  fields:
+    name: usage-partner
+    widget: 3
+    display_name: 11c. Geben Sie bitte auch an, wofür ihre Partner:in ihr Gerät nutzt.
+    default_value: null
+- model: registration.fielddefinition
+  pk: 34
+  fields:
+    name: usage-friends
+    widget: 3
+    display_name: 11d. Geben Sie bitte auch an, wofür ihre Freunde / Verwandte / Bekannte
+      ihr Gerät nutzt.
+    default_value: null
+- model: registration.fielddefinition
+  pk: 35
+  fields:
+    name: usage-others
+    widget: 3
+    display_name: 11e. Geben Sie bitte auch an, wofür andere ihr Gerät nutzen.
+    default_value: null
+- model: registration.fielddefinition
+  pk: 36
+  fields:
+    name: frequency
+    widget: 1
+    display_name: 12. Wie oft kaufen Sie im Internet ein?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 37
+  fields:
+    name: product_categories
+    widget: 3
+    display_name: 13. Was kaufen Sie im Internet ein?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 38
+  fields:
+    name: product_other
+    widget: 4
+    display_name: 13a. Was kaufen Sie im Internet sonst noch ein?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 39
+  fields:
+    name: devices
+    widget: 1
+    display_name: 14. Welches Gerät verwenden Sie hauptsächlich für Online-Einkäufe?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 40
+  fields:
+    name: no_shops
+    widget: 1
+    display_name: 15. Bei wie viel verschiedenen Online-Anbietern kaufen/buchen Sie
+      regelmäßig?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 41
+  fields:
+    name: shopping-strategy
+    widget: 3
+    display_name: 16. Wie gehen Sie bei einem Online-Einkauf vor?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 42
+  fields:
+    name: shopping-duration
+    widget: 1
+    display_name: 17. Wie viel Zeit benötigen Sie im Durchschnitt für einen Online-Einkauf
+      (von der Suche bis zum Kaufabschluss)?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 43
+  fields:
+    name: income
+    widget: 1
+    display_name: 18. Wie hoch ist Ihr monatliches Nettoeinkommen (Lohn oder Gehalt)
+      nach Abzug von Steuern und Sozialversicherungsbeiträgen?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 44
+  fields:
+    name: employed
+    widget: 1
+    display_name: 8. Gehen Sie aktuell einer bezahlten Tätigkeit nach?
+    default_value: null
+- model: registration.fielddefinition
+  pk: 45
+  fields:
+    name: employment_status
+    widget: 1
+    display_name: 9. Welche der folgenden Kategorien beschreibt Ihren Erwerbsstatus
+      am besten?
+    default_value: null
+- model: registration.dataattributetype
+  pk: 1
+  fields:
+    name: conditional-if-checked-name
+- model: registration.dataattributetype
+  pk: 2
+  fields:
+    name: conditional-if-checked-value
+- model: registration.dataattributetype
+  pk: 3
+  fields:
+    name: depends-on
+- model: registration.dataattribute
+  pk: 1
+  fields:
+    type: 3
+    value: children
+    field_definition: 26
+- model: registration.dataattribute
+  pk: 2
+  fields:
+    type: 1
+    value: device_user
+    field_definition: 31
+- model: registration.dataattribute
+  pk: 3
+  fields:
+    type: 2
+    value: '2'
+    field_definition: 31
+- model: registration.dataattribute
+  pk: 4
+  fields:
+    type: 1
+    value: other_users
+    field_definition: 32
+- model: registration.dataattribute
+  pk: 5
+  fields:
+    type: 2
+    value: '1'
+    field_definition: 32
+- model: registration.dataattribute
+  pk: 6
+  fields:
+    type: 1
+    value: other_users
+    field_definition: 33
+- model: registration.dataattribute
+  pk: 7
+  fields:
+    type: 2
+    value: '2'
+    field_definition: 33
+- model: registration.dataattribute
+  pk: 8
+  fields:
+    type: 1
+    value: other_users
+    field_definition: 34
+- model: registration.dataattribute
+  pk: 9
+  fields:
+    type: 2
+    value: '3'
+    field_definition: 34
+- model: registration.dataattribute
+  pk: 10
+  fields:
+    type: 1
+    value: other_users
+    field_definition: 35
+- model: registration.dataattribute
+  pk: 11
+  fields:
+    type: 2
+    value: '4'
+    field_definition: 35
+- model: registration.dataattribute
+  pk: 12
+  fields:
+    type: 1
+    value: product_categories
+    field_definition: 38
+- model: registration.dataattribute
+  pk: 13
+  fields:
+    type: 2
+    value: '13'
+    field_definition: 38
+- model: registration.fielddefinitionorder
+  pk: 21
+  fields:
+    position: 0
+    row: 0
+    optional: false
+    fieldset: 4
+    definition: 21
+- model: registration.fielddefinitionorder
+  pk: 22
+  fields:
+    position: 0
+    row: 1
+    optional: false
+    fieldset: 4
+    definition: 22
+- model: registration.fielddefinitionorder
+  pk: 23
+  fields:
+    position: 0
+    row: 2
+    optional: false
+    fieldset: 4
+    definition: 23
+- model: registration.fielddefinitionorder
+  pk: 24
+  fields:
+    position: 0
+    row: 3
+    optional: false
+    fieldset: 4
+    definition: 24
+- model: registration.fielddefinitionorder
+  pk: 25
+  fields:
+    position: 0
+    row: 4
+    optional: false
+    fieldset: 4
+    definition: 25
+- model: registration.fielddefinitionorder
+  pk: 26
+  fields:
+    position: 0
+    row: 5
+    optional: true
+    fieldset: 4
+    definition: 26
+- model: registration.fielddefinitionorder
+  pk: 27
+  fields:
+    position: 0
+    row: 6
+    optional: false
+    fieldset: 4
+    definition: 27
+- model: registration.fielddefinitionorder
+  pk: 28
+  fields:
+    position: 0
+    row: 7
+    optional: false
+    fieldset: 4
+    definition: 28
+- model: registration.fielddefinitionorder
+  pk: 29
+  fields:
+    position: 0
+    row: 10
+    optional: false
+    fieldset: 4
+    definition: 29
+- model: registration.fielddefinitionorder
+  pk: 30
+  fields:
+    position: 0
+    row: 11
+    optional: false
+    fieldset: 4
+    definition: 30
+- model: registration.fielddefinitionorder
+  pk: 31
+  fields:
+    position: 0
+    row: 12
+    optional: true
+    fieldset: 4
+    definition: 31
+- model: registration.fielddefinitionorder
+  pk: 32
+  fields:
+    position: 0
+    row: 13
+    optional: true
+    fieldset: 4
+    definition: 32
+- model: registration.fielddefinitionorder
+  pk: 33
+  fields:
+    position: 0
+    row: 14
+    optional: true
+    fieldset: 4
+    definition: 33
+- model: registration.fielddefinitionorder
+  pk: 34
+  fields:
+    position: 0
+    row: 15
+    optional: true
+    fieldset: 4
+    definition: 34
+- model: registration.fielddefinitionorder
+  pk: 35
+  fields:
+    position: 0
+    row: 0
+    optional: false
+    fieldset: 5
+    definition: 36
+- model: registration.fielddefinitionorder
+  pk: 36
+  fields:
+    position: 0
+    row: 1
+    optional: false
+    fieldset: 5
+    definition: 37
+- model: registration.fielddefinitionorder
+  pk: 37
+  fields:
+    position: 0
+    row: 2
+    optional: true
+    fieldset: 5
+    definition: 38
+- model: registration.fielddefinitionorder
+  pk: 38
+  fields:
+    position: 0
+    row: 3
+    optional: false
+    fieldset: 5
+    definition: 39
+- model: registration.fielddefinitionorder
+  pk: 39
+  fields:
+    position: 0
+    row: 4
+    optional: false
+    fieldset: 5
+    definition: 40
+- model: registration.fielddefinitionorder
+  pk: 40
+  fields:
+    position: 0
+    row: 5
+    optional: false
+    fieldset: 5
+    definition: 41
+- model: registration.fielddefinitionorder
+  pk: 41
+  fields:
+    position: 0
+    row: 6
+    optional: false
+    fieldset: 5
+    definition: 42
+- model: registration.fielddefinitionorder
+  pk: 42
+  fields:
+    position: 0
+    row: 7
+    optional: false
+    fieldset: 5
+    definition: 43
+- model: registration.fielddefinitionorder
+  pk: 43
+  fields:
+    position: 0
+    row: 8
+    optional: false
+    fieldset: 4
+    definition: 44
+- model: registration.fielddefinitionorder
+  pk: 44
+  fields:
+    position: 0
+    row: 9
+    optional: false
+    fieldset: 4
+    definition: 45
+- model: registration.fielddefinitionorder
+  pk: 45
+  fields:
+    position: 0
+    row: 16
+    optional: true
+    fieldset: 4
+    definition: 35
+- model: registration.valuematch
+  pk: 79
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 120
+    value_min: 0
+    definition: 21
+    display_name: null
+- model: registration.valuematch
+  pk: 80
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: male
+    value_max: null
+    value_min: null
+    definition: 22
+    display_name: männlich
+- model: registration.valuematch
+  pk: 81
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: female
+    value_max: null
+    value_min: null
+    definition: 22
+    display_name: weiblich
+- model: registration.valuematch
+  pk: 82
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: other
+    value_max: null
+    value_min: null
+    definition: 22
+    display_name: divers
+- model: registration.valuematch
+  pk: 83
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 20
+    value_min: 1
+    definition: 23
+    display_name: null
+- model: registration.valuematch
+  pk: 84
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 20
+    value_min: 1
+    definition: 24
+    display_name: null
+- model: registration.valuematch
+  pk: 85
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 20
+    value_min: 0
+    definition: 25
+    display_name: null
+- model: registration.valuematch
+  pk: 86
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 19
+    value_min: 1
+    definition: 26
+    display_name: null
+- model: registration.valuematch
+  pk: 87
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: single
+    value_max: null
+    value_min: null
+    definition: 27
+    display_name: Ledig
+- model: registration.valuematch
+  pk: 88
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: married
+    value_max: null
+    value_min: null
+    definition: 27
+    display_name: Verheiratet/Verpartnert
+- model: registration.valuematch
+  pk: 89
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: divorced
+    value_max: null
+    value_min: null
+    definition: 27
+    display_name: Geschieden
+- model: registration.valuematch
+  pk: 90
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: widowed
+    value_max: null
+    value_min: null
+    definition: 27
+    display_name: Verwitwet
+- model: registration.valuematch
+  pk: 91
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: mandatory_school
+    value_max: null
+    value_min: null
+    definition: 28
+    display_name: Pflichtschule
+- model: registration.valuematch
+  pk: 92
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: professional_school
+    value_max: null
+    value_min: null
+    definition: 28
+    display_name: Berufs-/Fachschule
+- model: registration.valuematch
+  pk: 93
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: high_school
+    value_max: null
+    value_min: null
+    definition: 28
+    display_name: Matura (AHS, BHS)
+- model: registration.valuematch
+  pk: 94
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: univ_applied_sciences
+    value_max: null
+    value_min: null
+    definition: 28
+    display_name: Fachhochschule
+- model: registration.valuematch
+  pk: 95
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: university
+    value_max: null
+    value_min: null
+    definition: 28
+    display_name: Universität
+- model: registration.valuematch
+  pk: 96
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 5
+    value_min: 4
+    definition: 29
+    display_name: null
+- model: registration.valuematch
+  pk: 97
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: single_device_user
+    value_max: null
+    value_min: null
+    definition: 30
+    display_name: Nein, ich nutze das Gerät allein
+- model: registration.valuematch
+  pk: 98
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: other_device_users
+    value_max: null
+    value_min: null
+    definition: 30
+    display_name: Ja
+- model: registration.valuematch
+  pk: 99
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: other_users-children
+    value_max: null
+    value_min: null
+    definition: 31
+    display_name: Mein Kind/ Meine Kinder
+- model: registration.valuematch
+  pk: 100
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: other_users-partner
+    value_max: null
+    value_min: null
+    definition: 31
+    display_name: PartnerIn
+- model: registration.valuematch
+  pk: 101
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: other_users-friends
+    value_max: null
+    value_min: null
+    definition: 31
+    display_name: FreundInnen/ Verwandte / Bekannte
+- model: registration.valuematch
+  pk: 102
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: other_users-others
+    value_max: null
+    value_min: null
+    definition: 31
+    display_name: Viele unterschiedliche Personen
+- model: registration.valuematch
+  pk: 103
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: work
+    value_max: null
+    value_min: null
+    definition: 32
+    display_name: Arbeit
+- model: registration.valuematch
+  pk: 104
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: leisure
+    value_max: null
+    value_min: null
+    definition: 32
+    display_name: Freizeit
+- model: registration.valuematch
+  pk: 105
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: education
+    value_max: null
+    value_min: null
+    definition: 32
+    display_name: Schule/Ausbildung
+- model: registration.valuematch
+  pk: 106
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: work
+    value_max: null
+    value_min: null
+    definition: 33
+    display_name: Arbeit
+- model: registration.valuematch
+  pk: 107
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: leisure
+    value_max: null
+    value_min: null
+    definition: 33
+    display_name: Freizeit
+- model: registration.valuematch
+  pk: 108
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: education
+    value_max: null
+    value_min: null
+    definition: 33
+    display_name: Schule/Ausbildung
+- model: registration.valuematch
+  pk: 109
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: work
+    value_max: null
+    value_min: null
+    definition: 34
+    display_name: Arbeit
+- model: registration.valuematch
+  pk: 110
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: leisure
+    value_max: null
+    value_min: null
+    definition: 34
+    display_name: Freizeit
+- model: registration.valuematch
+  pk: 111
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: education
+    value_max: null
+    value_min: null
+    definition: 34
+    display_name: Schule/Ausbildung
+- model: registration.valuematch
+  pk: 112
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: work
+    value_max: null
+    value_min: null
+    definition: 35
+    display_name: Arbeit
+- model: registration.valuematch
+  pk: 113
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: leisure
+    value_max: null
+    value_min: null
+    definition: 35
+    display_name: Freizeit
+- model: registration.valuematch
+  pk: 114
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: education
+    value_max: null
+    value_min: null
+    definition: 35
+    display_name: Schule/Ausbildung
+- model: registration.valuematch
+  pk: 115
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: daily
+    value_max: null
+    value_min: null
+    definition: 36
+    display_name: täglich
+- model: registration.valuematch
+  pk: 116
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: several_times_per_week
+    value_max: null
+    value_min: null
+    definition: 36
+    display_name: mehrmals pro Woche
+- model: registration.valuematch
+  pk: 117
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: once_per_week
+    value_max: null
+    value_min: null
+    definition: 36
+    display_name: maximal 1x pro Woche
+- model: registration.valuematch
+  pk: 118
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: once_per_month
+    value_max: null
+    value_min: null
+    definition: 36
+    display_name: maximal 1x pro Monat
+- model: registration.valuematch
+  pk: 119
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: infrequent
+    value_max: null
+    value_min: null
+    definition: 36
+    display_name: seltener
+- model: registration.valuematch
+  pk: 120
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 6
+    value_float: null
+    value_string: dont-know
+    value_max: null
+    value_min: null
+    definition: 36
+    display_name: weiß nicht
+- model: registration.valuematch
+  pk: 121
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Lebensmittel (inkl. Getränke)
+- model: registration.valuematch
+  pk: 122
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Medikamente
+- model: registration.valuematch
+  pk: 123
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Bekleidung, Schuhe und Accessoires
+- model: registration.valuematch
+  pk: 124
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Unterhaltungselektronik (z. B. TV, Smartphone, Playstation, Laptop
+      etc.)
+- model: registration.valuematch
+  pk: 125
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Einrichtung und Haushaltsgeräte (z. B. Mixer, Staubsauger, Waschmaschine
+      etc.)
+- model: registration.valuematch
+  pk: 126
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 6
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Kosmetik- und Pflegeartikel
+- model: registration.valuematch
+  pk: 127
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 7
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Spielsachen und andere Artikel für Kinder
+- model: registration.valuematch
+  pk: 128
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 8
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Hotels
+- model: registration.valuematch
+  pk: 129
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 9
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Flüge
+- model: registration.valuematch
+  pk: 130
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 10
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Fahrtendienste, Mietaustos, Carsharing, Leih-Räder, Leih-Motoräder
+- model: registration.valuematch
+  pk: 131
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 11
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Fahrkarten (Zug, U-Bahn, Straßenbahn, Bus)
+- model: registration.valuematch
+  pk: 132
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 12
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Essenslieferungen
+- model: registration.valuematch
+  pk: 133
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 13
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 37
+    display_name: Sonstiges
+- model: registration.valuematch
+  pk: 134
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: null
+    value_float: null
+    value_string: null
+    value_max: 255
+    value_min: 1
+    definition: 38
+    display_name: null
+- model: registration.valuematch
+  pk: 135
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 39
+    display_name: Laptop
+- model: registration.valuematch
+  pk: 136
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 39
+    display_name: Tablet
+- model: registration.valuematch
+  pk: 137
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 39
+    display_name: Smartphone
+- model: registration.valuematch
+  pk: 138
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 39
+    display_name: Stand-PC
+- model: registration.valuematch
+  pk: 139
+  fields:
+    value_type: 4
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 39
+    display_name: Sonstiges / Andere
+- model: registration.valuematch
+  pk: 140
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 40
+    display_name: 1-3
+- model: registration.valuematch
+  pk: 141
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 40
+    display_name: 4-6
+- model: registration.valuematch
+  pk: 142
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 40
+    display_name: 7-10
+- model: registration.valuematch
+  pk: 143
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 40
+    display_name: Mehr als 10
+- model: registration.valuematch
+  pk: 144
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 41
+    display_name: Ich habe es meist eilig und entscheide mich rasch
+- model: registration.valuematch
+  pk: 145
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 41
+    display_name: Ich greife spontan zu, wenn etwas günstig ist
+- model: registration.valuematch
+  pk: 146
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 41
+    display_name: Ich suche nach den günstigsten Angeboten und kaufe danach
+- model: registration.valuematch
+  pk: 147
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 41
+    display_name: Ich kaufe spontan, um mir etwas zu gönnen
+- model: registration.valuematch
+  pk: 148
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 41
+    display_name: Ich recherchiere lange bevor ich etwas kaufe
+- model: registration.valuematch
+  pk: 149
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 6
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 41
+    display_name: Ich zögere lange bevor ich etwas kaufe
+- model: registration.valuematch
+  pk: 150
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 42
+    display_name: 1-15 Minuten
+- model: registration.valuematch
+  pk: 151
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 42
+    display_name: 16-30 Minuten
+- model: registration.valuematch
+  pk: 152
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 42
+    display_name: 31-60 Minuten
+- model: registration.valuematch
+  pk: 153
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 42
+    display_name: Mehr als eine Stunde
+- model: registration.valuematch
+  pk: 154
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 43
+    display_name: unter 1.500 Euro
+- model: registration.valuematch
+  pk: 155
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 43
+    display_name: 1.501-2.500 Euro
+- model: registration.valuematch
+  pk: 156
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 43
+    display_name: 2.501-3.500 Euro
+- model: registration.valuematch
+  pk: 157
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 43
+    display_name: Mehr als 3.500 Euro
+- model: registration.valuematch
+  pk: 158
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: null
+    value_max: null
+    value_min: null
+    definition: 43
+    display_name: Keine Angabe
+- model: registration.valuematch
+  pk: 159
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: employed
+    value_max: null
+    value_min: null
+    definition: 44
+    display_name: Ja
+- model: registration.valuematch
+  pk: 160
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: unemployed
+    value_max: null
+    value_min: null
+    definition: 44
+    display_name: Nein
+- model: registration.valuematch
+  pk: 161
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 1
+    value_float: null
+    value_string: full-time
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Vollzeit erwerbstätig (min. 38,5 h/Woche)
+- model: registration.valuematch
+  pk: 162
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 2
+    value_float: null
+    value_string: part-time
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Teilzeit erwerbstätig
+- model: registration.valuematch
+  pk: 163
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 3
+    value_float: null
+    value_string: minimally
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Geringfügig erwerbstätig
+- model: registration.valuematch
+  pk: 164
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 4
+    value_float: null
+    value_string: unemployed
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Arbeitslos (auf der Suche)
+- model: registration.valuematch
+  pk: 165
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 5
+    value_float: null
+    value_string: non-working
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Nicht erwerbstätig (in Ausbildung, Karenz, etc.)
+- model: registration.valuematch
+  pk: 166
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 6
+    value_float: null
+    value_string: retired
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Pensioniert
+- model: registration.valuematch
+  pk: 167
+  fields:
+    value_type: 2
+    value_bool: null
+    value_int: 7
+    value_float: null
+    value_string: unable
+    value_max: null
+    value_min: null
+    definition: 45
+    display_name: Arbeitsunfähig
+- model: registration.personalattributevaluename
+  pk: 1
+  fields:
+    name: null
+- model: registration.personalattributevaluename
+  pk: 2
+  fields:
+    name: divers
+- model: registration.personalattributevaluename
+  pk: 3
+  fields:
+    name: Ledig
+- model: registration.personalattributevaluename
+  pk: 4
+  fields:
+    name: Fachhochschule
+- model: registration.personalattributevaluename
+  pk: 5
+  fields:
+    name: Ja
+- model: registration.personalattributevaluename
+  pk: 6
+  fields:
+    name: täglich
+- model: registration.personalattributevaluename
+  pk: 7
+  fields:
+    name: Mehr als 10
+- model: registration.personalattributevaluename
+  pk: 8
+  fields:
+    name: 16-30 Minuten
+- model: registration.personalattributevaluename
+  pk: 9
+  fields:
+    name: unter 1.500 Euro
+- model: registration.personalattributevaluename
+  pk: 10
+  fields:
+    name: Nein
+- model: registration.personalattributevaluename
+  pk: 11
+  fields:
+    name: Teilzeit erwerbstätig
+- model: registration.personalattributevaluename
+  pk: 12
+  fields:
+    name: Mein Kind/ Meine Kinder
+- model: registration.personalattributevaluename
+  pk: 13
+  fields:
+    name: PartnerIn
+- model: registration.personalattributevaluename
+  pk: 14
+  fields:
+    name: FreundInnen/ Verwandte / Bekannte
+- model: registration.personalattributevaluename
+  pk: 15
+  fields:
+    name: Viele unterschiedliche Personen
+- model: registration.personalattributevaluename
+  pk: 16
+  fields:
+    name: Arbeit
+- model: registration.personalattributevaluename
+  pk: 17
+  fields:
+    name: Freizeit
+- model: registration.personalattributevaluename
+  pk: 18
+  fields:
+    name: Schule/Ausbildung
+- model: registration.personalattributevaluename
+  pk: 19
+  fields:
+    name: Medikamente
+- model: registration.personalattributevaluename
+  pk: 20
+  fields:
+    name: Ich kaufe spontan, um mir etwas zu gönnen
+- model: registration.personalattributevaluename
+  pk: 21
+  fields:
+    name: männlich
+- model: registration.personalattributevaluename
+  pk: 22
+  fields:
+    name: Verheiratet/Verpartnert
+- model: registration.personalattributevaluename
+  pk: 23
+  fields:
+    name: Vollzeit erwerbstätig (min. 38,5 h/Woche)
+- model: registration.personalattributevaluename
+  pk: 24
+  fields:
+    name: maximal 1x pro Woche
+- model: registration.personalattributevaluename
+  pk: 25
+  fields:
+    name: Bekleidung, Schuhe und Accessoires
+- model: registration.personalattributevaluename
+  pk: 26
+  fields:
+    name: Unterhaltungselektronik (z. B. TV, Smartphone, Playstation, Laptop etc.)
+- model: registration.personalattributevaluename
+  pk: 27
+  fields:
+    name: Hotels
+- model: registration.personalattributevaluename
+  pk: 28
+  fields:
+    name: Fahrkarten (Zug, U-Bahn, Straßenbahn, Bus)
+- model: registration.personalattributevaluename
+  pk: 29
+  fields:
+    name: Essenslieferungen
+- model: registration.personalattributevaluename
+  pk: 30
+  fields:
+    name: 1-3
+- model: registration.personalattributevaluename
+  pk: 31
+  fields:
+    name: Ich habe es meist eilig und entscheide mich rasch
+- model: registration.personalattributevaluename
+  pk: 32
+  fields:
+    name: 1-15 Minuten
+- model: registration.personalattributevaluename
+  pk: 33
+  fields:
+    name: 2.501-3.500 Euro
+- model: registration.personalattributevaluename
+  pk: 34
+  fields:
+    name: Berufs-/Fachschule
+- model: registration.personalattributevaluename
+  pk: 35
+  fields:
+    name: Arbeitslos (auf der Suche)
+- model: registration.personalattributevaluename
+  pk: 36
+  fields:
+    name: weiß nicht
+- model: registration.personalattributevaluename
+  pk: 37
+  fields:
+    name: Kosmetik- und Pflegeartikel
+- model: registration.personalattributevaluename
+  pk: 38
+  fields:
+    name: 7-10
+- model: registration.personalattributevaluename
+  pk: 39
+  fields:
+    name: Ich suche nach den günstigsten Angeboten und kaufe danach
+- model: registration.personalattributevaluename
+  pk: 40
+  fields:
+    name: Mehr als eine Stunde
+- model: registration.personalattributevaluename
+  pk: 41
+  fields:
+    name: Keine Angabe
+- model: registration.personalattributevaluename
+  pk: 42
+  fields:
+    name: Universität
+- model: registration.personalattributevaluename
+  pk: 43
+  fields:
+    name: Nein, ich nutze das Gerät allein
+- model: registration.personalattributevaluename
+  pk: 44
+  fields:
+    name: Lebensmittel (inkl. Getränke)
+- model: registration.personalattributevaluename
+  pk: 45
+  fields:
+    name: Fahrtendienste, Mietaustos, Carsharing, Leih-Räder, Leih-Motoräder
+- model: registration.personalattributevaluename
+  pk: 46
+  fields:
+    name: weiblich
+- model: registration.personalattributevaluename
+  pk: 47
+  fields:
+    name: 4-6
+- model: registration.personalattributevaluename
+  pk: 48
+  fields:
+    name: 31-60 Minuten
+- model: registration.personalattributevaluename
+  pk: 49
+  fields:
+    name: Einrichtung und Haushaltsgeräte (z. B. Mixer, Staubsauger, Waschmaschine
+      etc.)
+- model: registration.personalattributevaluename
+  pk: 50
+  fields:
+    name: Flüge
+- model: registration.personalattributevaluename
+  pk: 51
+  fields:
+    name: 1.501-2.500 Euro
+- model: registration.personalattributevaluename
+  pk: 52
+  fields:
+    name: Geschieden
+- model: registration.personalattributevaluename
+  pk: 53
+  fields:
+    name: Ich zögere lange bevor ich etwas kaufe
+- model: registration.personalattributevaluename
+  pk: 54
+  fields:
+    name: maximal 1x pro Monat
+- model: registration.personalattributevaluename
+  pk: 55
+  fields:
+    name: Sonstiges
+- model: registration.personalattributevaluename
+  pk: 56
+  fields:
+    name: Ich recherchiere lange bevor ich etwas kaufe
+- model: registration.personalattributevaluename
+  pk: 57
+  fields:
+    name: Mehr als 3.500 Euro
+- model: registration.personalattributevaluename
+  pk: 58
+  fields:
+    name: Spielsachen und andere Artikel für Kinder
+- model: registration.personalattributevaluename
+  pk: 59
+  fields:
+    name: Matura (AHS, BHS)
+- model: registration.personalattributevaluename
+  pk: 60
+  fields:
+    name: Ich greife spontan zu, wenn etwas günstig ist
+- model: registration.personalattributevaluename
+  pk: 61
+  fields:
+    name: Nicht erwerbstätig (in Ausbildung, Karenz, etc.)
+- model: registration.personalattributevaluename
+  pk: 62
+  fields:
+    name: mehrmals pro Woche
+- model: registration.personalattributevaluename
+  pk: 63
+  fields:
+    name: Arbeitsunfähig
+- model: registration.personalattributevaluename
+  pk: 64
+  fields:
+    name: 1. Wie alt sind Sie?
+- model: registration.personalattributevaluename
+  pk: 65
+  fields:
+    name: 3. Wie viele Personen - Sie eingeschlossen - leben in Ihrem Haushalt?
+- model: registration.personalattributevaluename
+  pk: 66
+  fields:
+    name: 4. Wie viele Personen - Sie eingeschlossen - haben ein Einkommen?
+- model: registration.personalattributevaluename
+  pk: 67
+  fields:
+    name: 5. Wie viele Kinder leben in Ihrem Haushalt?
+- model: registration.personalattributevaluename
+  pk: 68
+  fields:
+    name: 10. Wie lautet Ihre Postleitzahl?
+- model: registration.personalattributevaluename
+  pk: 69
+  fields:
+    name: Laptop
+- model: registration.personalattributevaluename
+  pk: 70
+  fields:
+    name: 5b. Bitte geben Sie auch das Alter der Kinder an.
+- model: registration.personalattributevaluename
+  pk: 71
+  fields:
+    name: seltener
+- model: registration.personalattributevaluename
+  pk: 72
+  fields:
+    name: 13a. Was kaufen Sie im Internet sonst noch ein?
+- model: registration.personalattributevaluename
+  pk: 73
+  fields:
+    name: Verwitwet
+- model: registration.personalattributevaluename
+  pk: 74
+  fields:
+    name: Pensioniert
+- model: pricewatcher.page
+  pk: 1
+  fields:
+    name: Mindfactory AMD Ryzen 7 5800X
+    url: https://www.mindfactory.de/product_info.php/AMD-Ryzen-7-5800X-8x-3-80GHz-So-AM4-WOF_1380727.html
+    enabled: true
+    scraper: "// Desktop\r\n$title = trim(sizzle('h1[itemprop=\"name\"]:first', 'textContent'))\r\n$price
+      = trim(sizzle('span[itemprop=\"price\"]', 'content'))\r\n$availability = sizzle('link[itemprop=\"availability\"]',
+      'href')\r\n$currency = sizzle('span[itemprop=\"pricecurrency\"]', 'content')\r\n$identifier
+      = sizzle('span[itemprop=\"productID\"]', 'content')\r\n$canonical_url = sizzle('link[rel=\"canonical\"]',
+      'href')\r\n$brand = trim(sizzle('[itemprop=\"brand\"]','textContent'))\r\n$ean
+      = sizzle('[itemprop=\"gtin8\"]','content')\r\n$image = sizzle('[itemprop=\"image\"]:first','textContent')\r\n//
+      Mobile\r\n$title = $title or trim(sizzle('[itemprop=\"name\"]:first', 'textContent'))\r\n$price
+      = $price or sizzle('.products_price')\r\n$identifier = $identifier or re(/:\\s*(.*)/,
+      'i', sizzle('.products_info_col h3'))\r\n\r\n\r\nrequire $price, $title\r\n\r\nreturn
+      $availability, $canonical_url, $currency, $identifier, $image, $price, $title,
+      $brand, $ean, $image"
+- model: pricewatcher.page
+  pk: 2
+  fields:
+    name: otto tablet
+    url: https://www.otto.de/p/samsung-galaxy-tab-a-8-0-wi-fi-2019-tablet-8-32-gb-android-941078204/#variationId=941078205
+    enabled: true
+    scraper: "$sku = sizzle('meta[itemprop=\"sku\"]', 'content')\r\n$title = trim(sizzle('h1[itemprop=\"name\"]',
+      'textContent'))\r\n$brand = sizzle('[itemprop=\"brand\"]', 'textContent')\r\n$availability
+      = sizzle('link[itemprop=\"availability\"]', 'href')\r\n$canonical_url = sizzle('link[rel=\"canonical\"]',
+      'href')\r\n$currency = sizzle('meta[itemprop=\"priceCurrency\"]', 'content')\r\n$image
+      = sizzle('img[itemprop=\"image\"]', 'src')\r\n$identifier = sizzle('span[itemprop=\"productID\"]',
+      'content')\r\n$price = trim(sizzle('[itemprop=\"price\"]:first', 'textContent'))\r\n$canonical_url
+      = sizzle('link[rel=\"canonical\"]', 'href')\r\n$ean = trim(sizzle('[itemprop=\"gtin13\"]',
+      'content'))\r\n\r\n//IMAGE SEARCH FOR FASHION DOMAINS\r\n$image = $image or
+      sizzle('.prd_swiper-wrapper a','href')\r\n\r\n//set category and searchtype
+      if breadcrumb indicates fashion product\r\n\r\n$searchtype = ''\r\n$category
+      = ''\r\n\r\n$breadcrumbs = sizzle('.nav_breadcrumb-link','textContent')\r\n\r\nif
+      (re(/(Bekleidung|Wäsche\\/Bademode|herren|damen|mädchen|jungen|Schuhe)/,'i',$breadcrumbs))
+      {\r\n\t$searchtype = 'image'\r\n\t$category = 'fashion'\r\n}\r\n\r\nif (re(/(Möbel)/,'i',$breadcrumbs))
+      {\r\n\t$searchtype = 'image'\r\n\t$category = 'furniture'\r\n}\r\n\r\n//variant
+      switcher check\r\n$variant_switcher = sizzle('#dimensions','textContent')\r\n\r\nif
+      ($variant_switcher) {\r\n\trefresh(2000)\r\n}\r\n\r\nrequire $price, $title\r\n\r\nreturn
+      $availability, $brand, $canonical_url, $currency, $identifier, $image, $price,
+      $sku, $title, $canonical_url, $ean, $searchtype, $category"
+- model: pricewatcher.page
+  pk: 3
+  fields:
+    name: Amazon SSD
+    url: https://www.amazon.de/gp/product/B073SBQMCX
+    enabled: true
+    scraper: "$price = \"\"\r\n//check if there is a prime only deal\r\n$prime_only
+      = sizzle('#a-popover-primeOnlyPopoverContent')\r\n//if a deal is prime only,
+      take regular price\r\nif ($prime_only) {\r\n    $price = $price or sizzle('#priceblock_ourprice','textContent')\r\n}\r\n\r\n//else
+      take dealprice > sale price > regular price\r\n$price = $price or sizzle('#priceblock_dealprice','textContent')\r\n$price
+      = $price or re('(.*\\\\d+.*)', 'i', sizzle('#priceblock_saleprice','textContent'))\r\n$price
+      = $price or re('(.*\\\\d+.*)', 'i', sizzle('#priceblock_ourprice','textContent'))\r\n//remodeling
+      prices July-17 END\r\n\r\n$title = trim(sizzle('span#btAsinTitle', 'textContent'))\r\n$price
+      = $price or trim(sizzle('#alohaPhoneOnlyPrice', 'textContent'))\r\n$price =
+      $price or trim(sizzle('#priceblock_dealprice','textContent')) //added 12/09/15
+      to support special deals\r\n$price = $price or trim(sizzle('#priceblock_ourprice','textContent'))
+      \r\n$price = $price or trim(sizzle('td .priceLarge', 'textContent'))\r\n// 20-10-2021
+      design - also takes into account an AB test for two different buybox variations
+      - EAPI-1512\r\n$price = $price or trim(sizzle('#price_inside_buybox','textContent'))\r\n$price
+      = $price or trim(sizzle('#newBuyBoxPrice','textContent'))\r\n\r\n$price = $price
+      or trim(sizzle('.olpCondLink:first > .price', 'textContent'))\r\n\r\n// Redesign
+      added 2013-07-09\r\n$title = $title or trim(sizzle('h1#title', 'textContent'))\r\n$price
+      = $price or sizzle('#buyNewSection .a-color-price', 'textContent')\r\n$price
+      = $price or sizzle('#price_feature_div .a-color-price.a-size-large ', 'textContent')\r\n$price
+      = $price or sizzle('#price_feature_div .a-color-price.a-size-medium ', 'textContent')\r\n\r\n//
+      Additional Corrections 10/23/2015 - device without carriers / new/used from
+      MP / brand\r\n$price = $price or sizzle('.device-price .our-price','textContent')\r\n\r\n\r\n//
+      Mobile\r\n$title = $title or trim(sizzle('#product-title', 'textContent'))\r\n$price
+      = $price or trim(sizzle('#prices .a-color-price:first', 'textContent'))\r\n\r\n//
+      Mobile v2\r\n$title = $title or trim(sizzle('#ppd #title', 'textContent'))\r\n$price
+      = $price or trim(sizzle('#ppd #priceblock_ourprice', 'textContent'))\r\n\r\n\r\n//
+      new style product pages 2017-03-20\r\nif (not $price) {\r\n  $price_block_currency
+      = trim(sizzle('#priceblock_ourprice :first-child', 'textContent'))\r\n  $price_block_digits
+      = trim(sizzle('#priceblock_ourprice .buyingPrice', 'textContent'))\r\n  $price_block_cents
+      = trim(sizzle('#priceblock_ourprice .priceToPayPadding', 'textContent'))\r\n
+      \ if ($price_block_digits and $price_block_cents) {\r\n  \t$price = $price_block_currency
+      + $price_block_digits + '.' + $price_block_cents\r\n  }\r\n}\r\n\r\n//redesign
+      15/02/2022\r\n$price = $price or trim(sizzle(\"#kindle-price\",'textContent'))\r\n//redesign
+      01/03/2022\r\n$price = $price or trim(sizzle('#corePriceDisplay_desktop_feature_div
+      .a-offscreen:first','textContent'))\r\n$price = $price or trim(sizzle('#apex_offerDisplay_desktop
+      .a-price .a-offscreen:first','textContent'))\r\n$price = $price or trim(sizzle('#corePrice_desktop
+      .a-price .a-offscreen:first','textContent'))\r\n$price = $price or sizzle('#olp_feature_div
+      .a-color-price:first','textContent')\r\n\r\n\r\n//book swatch\r\n$price = $price
+      or trim(sizzle('#tmmSwatches .a-button-selected .a-color-base', 'textContent'))\r\n\r\n//
+      Fetch Price from Backend\r\nif (not $price and $asin) {\r\n  $url = 'https://www.amazon.de/gp/product/du/map-popover-update.html?a='
+      + $asin\r\n  $mpu = \"\"\r\n  $mpu = httpGet($url)\r\n  $price = re(/<b class=\"?priceLarge\"?>(.*?)</,
+      'i', $mpu)\r\n}\r\n\r\nif (re(/GRATIS|FREE|GRATUIT/, \"i\", $price)) {\r\n  $price
+      = \"\"\r\n}\r\n\r\n\r\n// Set refresh timer if the page supports product variants\r\n$swatcher
+      = sizzle('#jsSwatches') or sizzle('#twister .swatches') or sizzle('.variations
+      .swatchOuter') or trim(sizzle('#twister_feature_div'))\r\nif ($swatcher) {\r\n
+      \ refresh(3000)\r\n}\r\n\r\nrequire $price, $title\r\nreturn $title, $price"
+- model: pricewatcher.page
+  pk: 4
+  fields:
+    name: E-Tec RX6900 XT
+    url: https://www.e-tec.at/details.php?artnr=311634
+    enabled: true
+    scraper: "$price =sizzle('.price-discount','textContent')\r\n$price = $price or
+      trim(sizzle('[itemprop=\"price\"]:first', 'textContent'))\r\n$price = $price
+      or trim(sizzle('[itemprop=\"price\"]:first', 'content'))\r\n$price = $price
+      or trim(sizzle('[class=\"price\"]:first', 'textContent'))\r\n$price = re(/((\\d+\\.\\d+)|(\\d+\\,\\d+)|(\\d+\\.\\d+\\,\\d+)|(\\d+\\,\\d+\\.\\d+))/,
+      'i', $price)\r\n\r\n$title = trim(sizzle('h2 [itemprop=\"name\"]:first', 'textContent'))\r\n$title
+      = $title or trim(sizzle('h1[itemprop=\"name\"]:first', 'textContent'))\r\n$title
+      = $title or trim(sizzle('[class=\"product-name\"]:first','textContent'))\r\n$title
+      = $title or trim(sizzle('h1.product-title:first','textContent'))\r\n\r\n$brand
+      = trim(sizzle('[itemprop=\"brand\"]:first', 'content'))\r\n$brand = $brand or
+      trim(sizzle('[itemprop^=\"brand\"]:first', 'textContent'))\r\n$brand = $brand
+      or trim(sizzle('[class=\"logoImg\"]:first img', 'alt'))\r\n$brand = $brand or
+      trim(sizzle('[property=\"og:brand\"]:first', 'content'))\r\n$brand = $brand
+      or trim(sizzle('li:contains(\"Brand:\"):first', 'textContent'))\r\n$brand =
+      replace($brand, 'Brand: ', '')\r\n\r\n$sku = trim(sizzle('[itemprop=\"sku\"]:first',
+      'content'))\r\n$sku = $sku or trim(sizzle('[itemprop=\"sku\"]:first', 'textContent'))\r\n\r\n$ean
+      = trim(sizzle('[itemprop=\"ean\"]:first', 'content'))\r\n$ean = $ean or trim(sizzle('[itemprop=\"ean\"]:first',
+      'textContent'))\r\n\r\n$mpn = trim(sizzle('[itemprop=\"mpn\"]:first', 'content'))\r\n$mpn
+      = $mpn or trim(sizzle('[itemprop=\"mpn\"]:first', 'textContent'))\r\n$mpn =
+      $mpn or trim(sizzle('[class=\"itemNo productid\"]:first', 'content'))\r\n$mpn
+      = replace($mpn, 'mpn', '', ':', '')\r\n\r\n$canonical_url = sizzle('link[rel=\"canonical\"]',
+      'href')\r\n$canonical_url = $canonical_url or sizzle('[property=\"og:url\"]','content')\r\n\r\nrequire
+      $price, $title\r\nreturn $price, $title, $brand, $sku, $canonical_url, $ean,
+      $mpn"
+- model: pricewatcher.page
+  pk: 5
+  fields:
+    name: Mr Spex Ray Ban
+    url: https://www.misterspex.at/p/pg/6680308
+    enabled: true
+    scraper: "$title = trim(sizzle('h2[itemprop=\"name\"]:first', 'textContent'))\r\n$title
+      = $title or trim(sizzle('#Brand','textContent'))\r\n$title = $title or trim(sizzle('.spex-contentBlock','textContent'))\r\n$title
+      = $title or trim(sizzle('div[style=\"grid-area:title\"] h1', 'textContent'))\r\n$title
+      = $title or re(/([^|]*)|.*/, 'i', trim(sizzle('title', 'textContent')))\r\n$sku
+      = sizzle('[itemprop=\"sku\"]', 'textContent')\r\n$image = sizzle('meta[property=\"og:image\"]',
+      'content')\r\n$canonical_url = sizzle('link[rel=\"canonical\"]', 'href')\r\n$price
+      = trim(sizzle('span[itemprop=\"price\"]:first', 'content'))\r\n$price = $price
+      or trim(sizzle('[class=\"itemPrice\"]:first','textContent'))\r\n$price = re(/(\\d+\\,\\d{2})/,'i',
+      $price)\r\n$price = $price or trim(sizzle('[class=\"spex-selectionInput__price\"]:first','textContent'))\r\n$price
+      = $price or trim(sizzle('div[style=\"grid-area:variants\"] div[class=\"RadioButton_radio-button__icon__
+      RadioButton_checked__\"] ~ label span:last-child', 'textContent'))\r\n$price
+      = $price or trim(sizzle('div.CTASection_buyBox__8Uqij > div > div > div:nth-child(2)
+      > span:nth-child(2)'))\r\n$currency = sizzle('span[itemprop=\"priceCurrency\"]',
+      'content')\r\n$availability = sizzle('link[itemprop=\"availability\"]', 'href')\r\n$brand
+      = trim(sizzle('#Brand img','alt'))\r\n\r\n$check_http = re('^(http)','i', $image)\r\nif
+      ( not $check_http and $image ) {\r\n\t$image = \"https:\" + $image\r\n}\r\n\r\nrequire
+      $title, $price \r\nreturn $availability, $canonical_url, $currency, $image,
+      $price, $sku, $title, $brand"
+- model: pricewatcher.page
+  pk: 6
+  fields:
+    name: Amazon - Canon
+    url: https://www.amazon.de/Canon-PowerShot-Megapixel-optischer-schwenkbares/dp/B07HP6XKC6
+    enabled: true
+    scraper: "$price = \"\"\r\n//check if there is a prime only deal\r\n$prime_only
+      = sizzle('#a-popover-primeOnlyPopoverContent')\r\n//if a deal is prime only,
+      take regular price\r\nif ($prime_only) {\r\n    $price = $price or sizzle('#priceblock_ourprice','textContent')\r\n}\r\n\r\n//else
+      take dealprice > sale price > regular price\r\n$price = $price or sizzle('#priceblock_dealprice','textContent')\r\n$price
+      = $price or re('(.*\\\\d+.*)', 'i', sizzle('#priceblock_saleprice','textContent'))\r\n$price
+      = $price or re('(.*\\\\d+.*)', 'i', sizzle('#priceblock_ourprice','textContent'))\r\n//remodeling
+      prices July-17 END\r\n\r\n$title = trim(sizzle('span#btAsinTitle', 'textContent'))\r\n$price
+      = $price or trim(sizzle('#alohaPhoneOnlyPrice', 'textContent'))\r\n$price =
+      $price or trim(sizzle('#priceblock_dealprice','textContent')) //added 12/09/15
+      to support special deals\r\n$price = $price or trim(sizzle('#priceblock_ourprice','textContent'))
+      \r\n$price = $price or trim(sizzle('td .priceLarge', 'textContent'))\r\n// 20-10-2021
+      design - also takes into account an AB test for two different buybox variations
+      - EAPI-1512\r\n$price = $price or trim(sizzle('#price_inside_buybox','textContent'))\r\n$price
+      = $price or trim(sizzle('#newBuyBoxPrice','textContent'))\r\n\r\n$price = $price
+      or trim(sizzle('.olpCondLink:first > .price', 'textContent'))\r\n\r\n// Redesign
+      added 2013-07-09\r\n$title = $title or trim(sizzle('h1#title', 'textContent'))\r\n$price
+      = $price or sizzle('#buyNewSection .a-color-price', 'textContent')\r\n$price
+      = $price or sizzle('#price_feature_div .a-color-price.a-size-large ', 'textContent')\r\n$price
+      = $price or sizzle('#price_feature_div .a-color-price.a-size-medium ', 'textContent')\r\n\r\n//
+      Additional Corrections 10/23/2015 - device without carriers / new/used from
+      MP / brand\r\n$price = $price or sizzle('.device-price .our-price','textContent')\r\n\r\n\r\n//
+      Mobile\r\n$title = $title or trim(sizzle('#product-title', 'textContent'))\r\n$price
+      = $price or trim(sizzle('#prices .a-color-price:first', 'textContent'))\r\n\r\n//
+      Mobile v2\r\n$title = $title or trim(sizzle('#ppd #title', 'textContent'))\r\n$price
+      = $price or trim(sizzle('#ppd #priceblock_ourprice', 'textContent'))\r\n\r\n\r\n//
+      new style product pages 2017-03-20\r\nif (not $price) {\r\n  $price_block_currency
+      = trim(sizzle('#priceblock_ourprice :first-child', 'textContent'))\r\n  $price_block_digits
+      = trim(sizzle('#priceblock_ourprice .buyingPrice', 'textContent'))\r\n  $price_block_cents
+      = trim(sizzle('#priceblock_ourprice .priceToPayPadding', 'textContent'))\r\n
+      \ if ($price_block_digits and $price_block_cents) {\r\n  \t$price = $price_block_currency
+      + $price_block_digits + '.' + $price_block_cents\r\n  }\r\n}\r\n\r\n//redesign
+      15/02/2022\r\n$price = $price or trim(sizzle(\"#kindle-price\",'textContent'))\r\n//redesign
+      01/03/2022\r\n$price = $price or trim(sizzle('#corePriceDisplay_desktop_feature_div
+      .a-offscreen:first','textContent'))\r\n$price = $price or trim(sizzle('#apex_offerDisplay_desktop
+      .a-price .a-offscreen:first','textContent'))\r\n$price = $price or trim(sizzle('#corePrice_desktop
+      .a-price .a-offscreen:first','textContent'))\r\n$price = $price or sizzle('#olp_feature_div
+      .a-color-price:first','textContent')\r\n\r\n\r\n//book swatch\r\n$price = $price
+      or trim(sizzle('#tmmSwatches .a-button-selected .a-color-base', 'textContent'))\r\n\r\n//
+      Fetch Price from Backend\r\nif (not $price and $asin) {\r\n  $url = 'https://www.amazon.de/gp/product/du/map-popover-update.html?a='
+      + $asin\r\n  $mpu = \"\"\r\n  $mpu = httpGet($url)\r\n  $price = re(/<b class=\"?priceLarge\"?>(.*?)</,
+      'i', $mpu)\r\n}\r\n\r\nif (re(/GRATIS|FREE|GRATUIT/, \"i\", $price)) {\r\n  $price
+      = \"\"\r\n}\r\n\r\n\r\n// Set refresh timer if the page supports product variants\r\n$swatcher
+      = sizzle('#jsSwatches') or sizzle('#twister .swatches') or sizzle('.variations
+      .swatchOuter') or trim(sizzle('#twister_feature_div'))\r\nif ($swatcher) {\r\n
+      \ refresh(3000)\r\n}\r\n\r\nrequire $price, $title\r\nreturn $title, $price"
+- model: pricewatcher.pagelist
+  pk: 1
+  fields:
+    name: DefaultListe
+    default: true
+    pages:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
