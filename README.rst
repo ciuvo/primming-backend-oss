@@ -194,7 +194,8 @@ The ``.dockerignore`` file specifies directories / files which should not be inc
 Secrets
 =======
 
-Secrets are stored in the ``docker/secrets`` directory.
+Secrets are stored in the ``docker/secrets`` directory. Currently they contain a self-signed
+certificate and a few auto-generated passwords. Make sure to change them in production.
 
 Volumes
 =======
@@ -319,8 +320,6 @@ Specify a list of pages to watch & scrapers to extract price and product title. 
 the API endpoints to supply the extension with a list of URLs to visit & the scrapers to use. The
 URL-list and the scraper are two separate API calls since initialy the scraper was supplied by the
 Ciuvo API.
-
-``https://localhost/survey/D49BE467-5F3A-4249-A08D-F3C922C77CB4``
 
 **********
 Production
