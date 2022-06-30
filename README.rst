@@ -51,7 +51,7 @@ There are fixtures, located at `conf/fixtures`, you can easily load them from he
 
 .. code-block:: shell
 
-    (venv) $> PROJECT_ENV=dev PYTHONPATH=src DJANGO_SETTINGS_MODULE=ciuvo.portal.settings fab2 load-fixtures
+    (venv) $> PROJECT_ENV=dev PYTHONPATH=src DJANGO_SETTINGS_MODULE=primming.settings fab2 load-fixtures
 
 This will load all the data needed for the basic survey form + the page list and it's scrapers as
 needed.
@@ -64,7 +64,7 @@ located at http://localhost/obs/bo or http://localhost:8000/obs/bo if you run it
 
 .. code-block:: shell
 
-    $> PROJECT_ENV=dev PYTHONPATH=src DJANGO_SETTINGS_MODULE=ciuvo.portal.settings fab2 createsuperuser
+    $> PROJECT_ENV=dev PYTHONPATH=src DJANGO_SETTINGS_MODULE=primming.settings fab2 createsuperuser
 
 .. note::
 
@@ -84,7 +84,7 @@ You also need to make sure that your environment is set up correctly:
 
     * PYTHONPATH=src - we're using the default packaging.python.org format with the src folder
     * PRIMMING_ENV=dev - define the config set to be used, based on the environment (dev, stage, prod)
-    * DJANGO_SETTINGS_MODULE=ciuvo.portal.settings - required by Django
+    * DJANGO_SETTINGS_MODULE=primming.settings - required by Django
 
 Export them in your virtualenv's post activation hook to save yourself some typing.
 
