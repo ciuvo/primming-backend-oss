@@ -1,4 +1,5 @@
 {{INSTALL_DIR}}
+{{INSTALL_DIR}}/docker
 {{INSTALL_DIR}}/volumes
 {{INSTALL_DIR}}/volumes/mysql
 {{INSTALL_DIR}}/volumes/redis
