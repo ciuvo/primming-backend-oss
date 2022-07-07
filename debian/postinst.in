@@ -2,6 +2,7 @@
 
 set -e
 
+. /etc/default/primming-backend
 
 case "$1" in
     configure)
