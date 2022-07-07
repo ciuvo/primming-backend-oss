@@ -1,5 +1,5 @@
 [Unit]
-Description={{PGK_NAME}} service with docker compose
+Description={{PKG_NAME}} service with docker compose
 Requires=docker.service
 After=docker.service
 
@@ -7,7 +7,7 @@ After=docker.service
 Type=oneshot
 RemainAfterExit=true
 WorkingDirectory={{INSTALL_DIR}}
-EnvironmentFile=/etc/default/{{PGK_NAME}}
+EnvironmentFile=/etc/default/{{PKG_NAME}}
 ExecStart=/usr/bin/docker-compose -p primming -f docker-compose.yaml -f docker-compose.prod.yaml up -d --remove-orphans --no-build --scale webapp=4 --scale taskqueue=2
 ExecReload=/usr/bin/docker-compose -p primming -f docker-compose.yaml -f docker-compose.prod.yaml up -d --remove-orphans --no-build --scale webapp=4 --scale taskqueue=2
 ExecStop=/usr/bin/docker-compose -p primming down
