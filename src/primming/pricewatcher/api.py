@@ -53,7 +53,7 @@ class PageListViewApiMixin:
         return {
             "version": settings.VERSION,
             "list": lst.id,
-            "pages": [{"id": p.id, "url": p.url} for p in lst.pages.all()],
+            "pages": [{"id": p.id, "url": p.url} for p in lst.pages.filter(enabled=True)],
         }
 
 
